@@ -1,4 +1,6 @@
 #!/bin/bash
 
-gcc factors.c -o factor
-./factor "$1"
+FILE=factor
+[ -f "$FILE" ] || gcc factors.c -o "$FILE"
+
+./"$FILE" "$1"
