@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	}
 
 	number = 0;
-	fd = open("tests", O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 	buf = malloc(1000 * sizeof(char));
 	buf2 = malloc(120 * sizeof(char));
 	leido = read(fd, buf, letters);
